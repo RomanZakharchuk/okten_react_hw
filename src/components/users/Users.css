@@ -1,0 +1,8 @@
+.wrap_user {
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: cornsilk;
+    padding: 5px;
+    margin: 0 5px 5px 0;
+}
