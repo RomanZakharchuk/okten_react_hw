@@ -1,0 +1,10 @@
+.wrapper {
+    width: 200px;
+    border: 1px solid black;
+    background: aliceblue;
+    margin: 0 5px 5px 0;
+}
+
+img {
+    width: 100%;
+}
