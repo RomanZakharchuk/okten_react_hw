@@ -1,5 +1,9 @@
-.user_wrap {
-    width: 300px;
+.users_wrap {
     border: 1px solid black;
-    background: aliceblue;
+    border-radius: 5px;
+    background: beige;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px;
 }

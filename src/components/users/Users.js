@@ -1,13 +1,27 @@
 import './Users.css';
+import {useEffect, useState} from "react";
+import {getUsers} from "../../services";
+import User from "../user";
 
-export default function  Users({item, showPosts}) {
+const  Users = ({showPosts}) =>  {
+
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        getUsers().then(({data}) => setUsers([...data]));
+    }, []);
+
     return (
-        <div className='user_wrap'>
-            <h2>{item.id}</h2>
-            <h2>Name: {item.name}</h2>
-            <h3>User Name: {item.username}</h3>
-            <p>Email: {item.email}</p>
-            <button onClick={() => showPosts(item.id)}>Show posts</button>
+        <div className='users_wrap'>
+            {
+                users.map(value => <User
+                    key={value.id}
+                    item={value}
+                    showPosts={showPosts}
+                />)
+            }
         </div>
     )
 }
+
+export default Users;
