@@ -1,8 +1,9 @@
+import {useState} from "react";
+
 import './App.css';
+import {getPostComments} from "./services";
 import Users from "./components/users";
 import Comments from "./components/comments/Comments";
-import {getPostComments} from "./services";
-import {useState} from "react";
 
 const App = () =>{
 

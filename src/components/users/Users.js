@@ -1,5 +1,6 @@
-import './Users.css';
 import {useEffect, useState} from "react";
+
+import './Users.css';
 import {getUsers} from "../../services";
 import User from "../user";
 
