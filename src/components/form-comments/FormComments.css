@@ -1,0 +1,10 @@
+.form {
+    max-width: 600px;
+    height: 100px;
+    background: aqua;
+    border: 1px solid black;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
