@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
+
 import {ApiService} from "../services/api.service";
 import CommentComponent from "../components/CommentComponent";
 
 class Comments extends Component {
-    state = {comments: []};
+    constructor(props) {
+        super(props);
+        this.state = {comments: []};
+    }
 
     componentDidMount() {
         this.apiService = new ApiService();

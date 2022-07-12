@@ -4,7 +4,10 @@ import {ApiService} from "../services/api.service";
 import UserComponent from "../components/UserComponent";
 
 class Users extends Component {
-    state = {users: []};
+    constructor(props) {
+        super(props);
+        this.state = {users: []};
+    }
 
     componentDidMount() {
          this.apiService = new ApiService();

@@ -4,7 +4,10 @@ import {ApiService} from "../services/api.service";
 import PostComponent from "../components/PostComponent";
 
 class Posts extends Component {
-    state = {posts: []};
+    constructor(props) {
+        super(props);
+        this.state = {posts: []};
+    }
 
     componentDidMount() {
         this.apiService = new ApiService();
