@@ -1,0 +1,10 @@
+.carsBlock {
+    margin: 30px 20px;
+    background: deepskyblue;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}

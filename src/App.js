@@ -1,11 +1,16 @@
 import './App.css';
+import {CarForm, Cars} from "./components";
 
-function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+const App = () => {
+    return (
+        <div className="App">
+            <h1>This is our Form</h1>
+            <div className='content'>
+                <CarForm/>
+                <Cars/>
+            </div>
+        </div>
+    );
 }
 
-export default App;
+export {App};
