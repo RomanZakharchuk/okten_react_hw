@@ -88,11 +88,21 @@ showSum(3, 8);
 
 //
 
-const user: {name: string, age: number, gender: string} = {name:'Roman', age:29, gender:'Male'}
-
-const incAge = (someUser:number, inc: number) => {
-    someUser += inc
-    return someUser
+interface IUser {
+    name: string;
+    age: number;
+    gender: string;
 }
 
-console.log(incAge(user.age, 2));
+const user:IUser = {
+    name: 'Max',
+    age: 18,
+    gender: 'male',
+}
+
+const incAge = (someUser: IUser, inc:number): IUser => {
+    someUser.age += inc;
+    return someUser;
+}
+
+incAge(user, 2);
