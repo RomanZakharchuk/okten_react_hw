@@ -1,3 +1,18 @@
+
+interface ICore {
+    flight: number;
+    core: {
+        reuse_count: number;
+        status: string;
+    };
+}
+
+interface IPayload {
+    payload_type: string;
+    payload_mass_kg: number;
+    payload_mass_lbs: number;
+}
+
 interface IStarship {
     mission_name: string;
     launch_date_local: string;
@@ -11,24 +26,10 @@ interface IStarship {
     rocket: {
         rocket_name: string;
         first_stage: {
-            cores: [
-                {
-                    flight: number;
-                    core: {
-                        reuse_count: number;
-                        status: string;
-                    };
-                }
-            ]
+            cores: ICore[]
         };
         second_stage: {
-            payloads: [
-                {
-                    payload_type: string;
-                    payload_mass_kg: number;
-                    payload_mass_lbs: number;
-                }
-            ]
+            payloads: IPayload[]
         }
     }
 }
